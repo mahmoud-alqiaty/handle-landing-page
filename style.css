@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --headingFont: 'Poppins', sans-serif;
+    --bodyFont: 'Open Sans', sans-serif;
+
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.huudle-landingPage{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    background: url(./images/bg-desktop.svg), linear-gradient(to right , var(--Violet), var(--Violet));
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.logo{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: var(--headingFont);
+    margin-bottom: 40px;
+}
+
+.logo span:first-child{
+    color: var(--SoftMagenta);
+    font-size: 30px;
+}
+
+.hero{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .left-side{
+    width: 49%;
+    height: 100%;
+}
+.hero .left-side img{
+    width: 100%;
+    height: 100%;
+  
+}
+
+.hero .right-side{
+    width: 49%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero .right-side .title{
+   color: #fff;
+   font-family: var(--headingFont);
+   font-size: 36px;
+   font-weight: 600;
+   line-height: 1.5;
+   margin-bottom: 15px;
+}
+.hero .right-side .subtitle{
+   color: var(--SoftMagenta);
+   font-family: var(--bodyFont);
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 1.5;
+}
+
+.hero .right-side .register-btn{
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgb(77, 53, 53);
+    text-align: center;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    color: var(--Violet);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.hero .right-side .register-btn:hover{
+    background-color: var(--SoftMagenta);
+    color: rgb(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.footer{
+    width: 100px;
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+
+}
+
+.footer .social-icons{
+    width: 120%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .social-icons a{
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social-icons a:hover{
+    border: 1px solid var(--SoftMagenta);
+    color: var(--SoftMagenta);
+}
+
+
+/* ==========Media-Query============== */
+
+@media screen and (max-width:992px){
+    .hero .right-side{
+        padding: 0 0px;
+    }
+    .hero .right-side .title{
+       font-size: 30px;
+    }
+
+    .hero .right-side .subtitle{
+       font-size: 16px;
+    }
+    
+    .hero .right-side .register-btn{
+        display: inline-block;
+        text-decoration: none;
+        width: 200px;
+        padding: 10px 15px;
+        margin-top: 20px;
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgb(77, 53, 53);
+        text-align: center;
+        font-family: var(--headingFont);
+        font-weight: 400;
+        color: var(--Violet);
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .hero .right-side .register-btn:hover{
+        background-color: var(--SoftMagenta);
+        color: rgb(255, 255, 255, 0.9);
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width:600px){
+    .huudle-landingPage{
+        height: auto;
+        background: url(./images/bg-mobile.svg), linear-gradient(to right , var(--Violet), var(--Violet));
+        background-size: 100% 50%, cover;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: top center;
+    }
+
+    .hero{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .hero .left-side{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .left-side img{
+        width: 80%;
+        height: 200px;
+    }
+    
+    .hero .right-side{
+        width: 100%;
+        height: 100%;
+        padding: 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero .right-side .title{
+       font-size: 28px;
+       line-height: 1.4;
+       margin-bottom: 15px;
+    }
+    .hero .right-side .subtitle{
+       font-size: 16px;
+       line-height: 1.5;
+    }
+    
+    .hero .right-side .register-btn{
+        display: block;
+        text-decoration: none;
+        width: 250px;
+        padding: 10px 15px;
+        margin: 20px auto;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgb(77, 53, 53);
+        text-align: center;
+        font-family: var(--headingFont);
+        font-weight: 400;
+        color: var(--Violet);
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+
+
+    .footer{
+        width: 100%;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    
+    }
+
+    .footer .social-icons{
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer .social-icons a{
+        text-decoration: none;
+        border-radius: 50%;
+        color: #fff;
+        border: 1px solid #fff;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .social-icons a:hover{
+        border: 1px solid var(--SoftMagenta);
+        color: var(--SoftMagenta);
+    }
+
+}
